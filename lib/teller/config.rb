@@ -14,26 +14,34 @@ module Teller::Config
   end
 
   def certificate=(path)
-    begin
-      File.open(path, 'r') do |file|
-        @certificate = OpenSSL::X509::Certificate.new(file)
+    if path
+      begin
+        File.open(path, 'r') do |file|
+          @certificate = OpenSSL::X509::Certificate.new(file)
+        end
+      rescue Errno::ENOENT
+        raise Error, "Certificate file not found: #{path}"
+      rescue OpenSSL::X509::CertificateError
+        raise Error, "Invalid certificate data in file: #{path}"
       end
-    rescue Errno::ENOENT
-      raise Error, "Certificate file not found: #{path}"
-    rescue OpenSSL::X509::CertificateError
-      raise Error, "Invalid certificate data in file: #{path}"
+    else
+      @certificate = nil
     end
   end
 
   def private_key=(path)
-    begin
-      File.open(path, 'r') do |file|
-        @private_key = OpenSSL::PKey.read(file, nil)
+    if path
+      begin
+        File.open(path, 'r') do |file|
+          @private_key = OpenSSL::PKey.read(file, nil)
+        end
+      rescue Errno::ENOENT
+        raise Error, "Private key file not found: #{path}"
+      rescue OpenSSL::PKey::PKeyError
+        raise Error, "Invalid private key data in file: #{path}"
       end
-    rescue Errno::ENOENT
-      raise Error, "Private key file not found: #{path}"
-    rescue OpenSSL::PKey::PKeyError
-      raise Error, "Invalid private key data in file: #{path}"
+    else
+      @private_key = nil
     end
   end
 

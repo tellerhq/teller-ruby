@@ -1,0 +1,10 @@
+HTTP/1.1 404 Not Found
+cache-control: max-age=0, private, must-revalidate
+content-length: 96
+content-type: application/json; charset=utf-8
+date: Sun, 23 Jul 2023 16:42:30 GMT
+server: Teller API
+teller-enrollment-status: healthy
+x-request-id: F3SMyAceLKiHfL0APYgC
+
+{"error":{"message":"The requested account details resource was not found.","code":"not_found"}}

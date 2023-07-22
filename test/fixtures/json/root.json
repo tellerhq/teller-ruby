@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+cache-control: max-age=0, private, must-revalidate
+content-length: 55
+content-type: application/json; charset=utf-8
+date: Sun, 23 Jul 2023 16:16:13 GMT
+server: Teller API
+x-request-id: F3SLWNDU1QIOJFIAUQNC
+
+{"links":{"accounts":"https://api.teller.io/accounts"}}

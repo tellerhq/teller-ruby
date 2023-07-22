@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+cache-control: max-age=0, private, must-revalidate
+content-length: 236
+content-type: application/json; charset=utf-8
+date: Sun, 23 Jul 2023 16:42:06 GMT
+server: Teller API
+teller-enrollment-status: healthy
+x-request-id: F3SMwnf0l4m88CAAdnrx
+
+{"links":{"self":"https://api.teller.io/accounts/acc_oiin624kqjrg2mp2ea000/balances","account":"https://api.teller.io/accounts/acc_oiin624kqjrg2mp2ea000"},"ledger":"4698.93","available":"301.07","account_id":"acc_oiin624kqjrg2mp2ea000"}

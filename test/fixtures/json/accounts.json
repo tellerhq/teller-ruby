@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+cache-control: max-age=0, private, must-revalidate
+content-length: 1664
+content-type: application/json; charset=utf-8
+date: Sun, 23 Jul 2023 16:19:07 GMT
+server: Teller API
+x-request-id: F3SLgV1PMVW-rD8AckEx
+
+[{"type":"credit","subtype":"credit_card","status":"open","name":"Platinum Card","links":{"transactions":"https://api.teller.io/accounts/acc_oiin624kqjrg2mp2ea000/transactions","self":"https://api.teller.io/accounts/acc_oiin624kqjrg2mp2ea000","balances":"https://api.teller.io/accounts/acc_oiin624kqjrg2mp2ea000/balances"},"last_four":"7857","institution":{"name":"Security Credit Union","id":"security_cu"},"id":"acc_oiin624kqjrg2mp2ea000","enrollment_id":"enr_oiin624rqaojse22oe000","currency":"USD"},{"type":"depository","subtype":"checking","status":"open","name":"My Checking","links":{"transactions":"https://api.teller.io/accounts/acc_oiin624iajrg2mp2ea000/transactions","self":"https://api.teller.io/accounts/acc_oiin624iajrg2mp2ea000","details":"https://api.teller.io/accounts/acc_oiin624iajrg2mp2ea000/details","balances":"https://api.teller.io/accounts/acc_oiin624iajrg2mp2ea000/balances"},"last_four":"7346","institution":{"name":"Security Credit Union","id":"security_cu"},"id":"acc_oiin624iajrg2mp2ea000","enrollment_id":"enr_oiin624rqaojse22oe000","currency":"USD"},{"type":"depository","subtype":"savings","status":"open","name":"Essential Savings","links":{"transactions":"https://api.teller.io/accounts/acc_oiin624jqjrg2mp2ea000/transactions","self":"https://api.teller.io/accounts/acc_oiin624jqjrg2mp2ea000","details":"https://api.teller.io/accounts/acc_oiin624jqjrg2mp2ea000/details","balances":"https://api.teller.io/accounts/acc_oiin624jqjrg2mp2ea000/balances"},"last_four":"3528","institution":{"name":"Security Credit Union","id":"security_cu"},"id":"acc_oiin624jqjrg2mp2ea000","enrollment_id":"enr_oiin624rqaojse22oe000","currency":"USD"}]

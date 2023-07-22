@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+cache-control: max-age=0, private, must-revalidate
+content-length: 491
+content-type: application/json; charset=utf-8
+date: Sun, 23 Jul 2023 16:24:10 GMT
+server: Teller API
+teller-enrollment-status: healthy
+x-request-id: F3SLx_tA8obguDgAPTqy
+
+{"type":"credit","subtype":"credit_card","status":"open","name":"Platinum Card","links":{"transactions":"https://api.teller.io/accounts/acc_oiin624kqjrg2mp2ea000/transactions","self":"https://api.teller.io/accounts/acc_oiin624kqjrg2mp2ea000","balances":"https://api.teller.io/accounts/acc_oiin624kqjrg2mp2ea000/balances"},"last_four":"7857","institution":{"name":"Teller Bank","id":"teller_bank"},"id":"acc_oiin624kqjrg2mp2ea000","enrollment_id":"enr_oiin624rqaojse22oe000","currency":"USD"}

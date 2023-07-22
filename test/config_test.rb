@@ -1,5 +1,4 @@
-require "minitest/autorun"
-require "teller"
+require "test_helper"
 
 describe Teller::Config do
   let(:config) { Teller::Config }
@@ -67,5 +66,4 @@ describe Teller::Config do
       config.private_key = "test/fixtures/invalid.pem"
     end
   end
-
 end
