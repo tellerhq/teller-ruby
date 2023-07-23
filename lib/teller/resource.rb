@@ -19,8 +19,13 @@ class Teller::Resource < OpenStruct
     end
   end
 
+  def delete
+    @client.delete @table[:links]["self"]
+    true
+  end
+
   def reload
-    initialize(@client.get(@table[:links].self), @client)
+    initialize(@client.get(@table[:links]["self"]), @client)
     self
   end 
 

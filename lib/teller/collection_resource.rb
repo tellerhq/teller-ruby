@@ -8,7 +8,12 @@ module Teller
 
     def get(id)
       url = @url + "/" + id
-      Teller::Resource.new(url, @client.get(url), @client)
+      Teller::Resource.new(@client.get(url), @client)
+    end
+
+    def delete
+      @client.delete @url
+      true
     end
 
     def reload

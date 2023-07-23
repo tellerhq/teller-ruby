@@ -6,7 +6,7 @@ module Teller
       config = Teller::Config.dup
       config.setup(overrides)
       
-      client = Teller::HTTP.new(config)
+      client = Teller::API.new(config)
       entrypoint = client.get(URL)
       @target = Teller::Resource.new(entrypoint, client)
     end
