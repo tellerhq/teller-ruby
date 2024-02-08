@@ -17,7 +17,6 @@ class Teller::API
   end
 
   def request(method, url, body=nil)
-
     uri = URI.parse(url)
 
     http = Net::HTTP.new(uri.host, uri.port)
@@ -45,8 +44,8 @@ class Teller::API
     response = http.request(request)
 
     case response
-      when Net::HTTPNoContent
-        return
+    when Net::HTTPNoContent
+      return
     when Net::HTTPSuccess
       JSON.parse(response.body)
     when Net::HTTPClientError, Net::HTTPServerError

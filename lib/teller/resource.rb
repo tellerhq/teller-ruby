@@ -11,9 +11,9 @@ class Teller::Resource < OpenStruct
   end
 
   def method_missing(method, *args, &block)    
-    if table[:links].key?(method.to_s)
-      table[method] ||= subresource(table[:links][method.to_s])
-      table[method]
+    if @table[:links].key?(method.to_s)
+      @table[method] ||= subresource(table[:links][method.to_s])
+      @table[method]
     else
       super
     end
@@ -30,7 +30,7 @@ class Teller::Resource < OpenStruct
   end 
 
   def respond_to_missing?(method, include_private = false)
-    table[:links].key?(method.to_s) || super
+    @table[:links]&.key?(method.to_s) || super
   end
 
   private

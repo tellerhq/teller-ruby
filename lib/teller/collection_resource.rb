@@ -13,6 +13,7 @@ module Teller
 
     def delete
       @client.delete @url
+      @collection = []
       true
     end
 
